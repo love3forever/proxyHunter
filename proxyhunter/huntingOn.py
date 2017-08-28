@@ -40,7 +40,7 @@ class Hunter(object):
         # 网站会持续刷新提供的proxy，所以在这里重复请求即可
         proxy_index = cycle(range(1, 11))
         for index in proxy_index:
-            print('wating for new proxy')
+            print('waiting for new proxy')
             time.sleep(5)
             proxy_url = self._proxyurl.format(index)
             try:
@@ -76,7 +76,8 @@ class Hunter(object):
                     test_soup = BeautifulSoup(test_response.content, 'lxml')
                     ip_info = test_soup.select('.well')
                     if ip_info:
-                        print(ip_info)
+                        geo_info = ip_info[0].select('p')[-1].string
+                        print(geo_info)
                         return True
                 else:
                     return False
