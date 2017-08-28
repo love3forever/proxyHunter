@@ -9,14 +9,14 @@ from setuptools import setup, find_packages
 
 setup(
     name="proxyhunter",
-    version="0.0.1",
+    version="0.0.3",
     keywords=("pip", "http", "http proxy"),
     description="free available http proxy from web",
     long_description="proxy hunter",
     license="MIT Licence",
 
     url="https://eclipsesv.com",
-    author="wangmengcn",
+    author="eclipse_sv",
     author_email="eclipse_sv@163.com",
 
     packages=find_packages(),
